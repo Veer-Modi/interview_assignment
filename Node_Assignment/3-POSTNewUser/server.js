@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+app.use(express.json());
+
 const users = [
-  { id: 1, name: "john", email: "john@example.com" },
-  { id: 2, name: "Bob", email: "bob@example.com" },
-  { id: 3, name: "Charlie", email: "charlie@example.com" },
+  { id: 1, name: 'Alice', email: 'alice@example.com' },
+  { id: 2, name: 'Bob', email: 'bob@example.com' }
 ];
 
 app.get('/', (req, res) => {
@@ -14,6 +15,15 @@ app.get('/', (req, res) => {
 
 app.get('/users', (req, res) => {
   res.json(users);
+});
+
+app.post('/users', (req, res) => {
+  const newUser = req.body;
+
+  newUser.id = users.length + 1;
+
+  users.push(newUser);
+  res.status(201).json(newUser);
 });
 
 app.listen(PORT, () => {
