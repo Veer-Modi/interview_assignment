@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  padding: 40px;
+  text-align: center;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
