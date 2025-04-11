@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.timer-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
